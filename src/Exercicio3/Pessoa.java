@@ -10,7 +10,7 @@ public class Pessoa {
     private double altura;
     private int anoAtual;
 
-    public Pessoa(String nome, String aniversario,String anoNascimento, double altura, String anoAtual) {
+    public Pessoa(String nome, String aniversario,int anoNascimento, double altura, int anoAtual) {
         this.nome = nome;
         this.aniversario = aniversario;
         this.anoNascimento = anoNascimento;
@@ -25,7 +25,7 @@ public class Pessoa {
     public String getAniversario() {
         return aniversario;
     }
-    public String getAnoNascimento() {
+    public int getAnoNascimento() {
         return anoNascimento;
     }
 
@@ -33,7 +33,7 @@ public class Pessoa {
         return altura;
     }
 
-    public String getAnoAtual() {
+    public int getAnoAtual() {
         return anoAtual;
     }
 
@@ -44,7 +44,7 @@ public class Pessoa {
     public void setAniversario(String aniversario) {
         this.aniversario = aniversario;
     }
-    public void setAnoNascimento(String anoNascimento){
+    public void setAnoNascimento(int anoNascimento){
         this.anoNascimento = anoNascimento;
     }
 
@@ -52,7 +52,7 @@ public class Pessoa {
         this.altura = altura;
     }
 
-    public void setAnoAtual(String anoAtual) {
+    public void setAnoAtual(int anoAtual) {
         this.anoAtual = anoAtual;
     }
 
@@ -63,7 +63,7 @@ public class Pessoa {
     public void imprimeDados() {
         System.out.println("Seu nome é: " + getNome());
         System.out.println("Seu aniversário é: " + getAniversario());
-        System.out.println("Sua idade é: " + (getAnoAtual()-getAnoNascimento()));
+        System.out.println("Sua idade é: " + (getAnoAtual()-getAnoNascimento())+ " anos");
         System.out.println("Sua altura é: " + getAltura() + "m");
     }
 }
