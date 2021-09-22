@@ -5,13 +5,15 @@ package Exercicio3;
  */
 public class Pessoa {
     private String nome;
-    private String dataNascimento;
+    private String aniversario;
+    private int anoNascimento;
     private double altura;
-    private String anoAtual;
+    private int anoAtual;
 
-    public Pessoa(String nome, String dataNascimento, double altura, String anoAtual) {
+    public Pessoa(String nome, String aniversario,String anoNascimento, double altura, String anoAtual) {
         this.nome = nome;
-        this.dataNascimento = dataNascimento;
+        this.aniversario = aniversario;
+        this.anoNascimento = anoNascimento;
         this.altura = altura;
         this.anoAtual = anoAtual;
     }
@@ -20,8 +22,11 @@ public class Pessoa {
         return nome;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
+    public String getAniversario() {
+        return aniversario;
+    }
+    public String getAnoNascimento() {
+        return anoNascimento;
     }
 
     public double getAltura() {
@@ -29,26 +34,36 @@ public class Pessoa {
     }
 
     public String getAnoAtual() {
-        return  anoAtual;
+        return anoAtual;
     }
-    public void setNome (String nome){
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
-    public void setDataNascimento(String dataNascimento){
-        this.dataNascimento = dataNascimento;
+
+    public void setAniversario(String aniversario) {
+        this.aniversario = aniversario;
     }
-    public void setAltura (double altura){
+    public void setAnoNascimento(String anoNascimento){
+        this.anoNascimento = anoNascimento;
+    }
+
+    public void setAltura(double altura) {
         this.altura = altura;
     }
-    public void setAnoAtual (String anoAtual){
+
+    public void setAnoAtual(String anoAtual) {
         this.anoAtual = anoAtual;
     }
-    public void calculaIdade(){
+
+    public void calculaIdade() {
 
     }
-    public void imprimeDados (){
-        System.out.println("Seu nome é: " +getNome());
-        System.out.println("Sua data de nascimento é: " +getDataNascimento());
-        System.out.println("Sua altura é: " +getAltura()+ "m");
+
+    public void imprimeDados() {
+        System.out.println("Seu nome é: " + getNome());
+        System.out.println("Seu aniversário é: " + getAniversario());
+        System.out.println("Sua idade é: " + (getAnoAtual()-getAnoNascimento()));
+        System.out.println("Sua altura é: " + getAltura() + "m");
     }
 }
